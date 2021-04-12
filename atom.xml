@@ -6,7 +6,7 @@
   <link href="http://linraino.github.io/atom.xml" rel="self"/>
   
   <link href="http://linraino.github.io/"/>
-  <updated>2021-03-26T01:54:11.079Z</updated>
+  <updated>2021-04-12T08:32:31.291Z</updated>
   <id>http://linraino.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://linraino.github.io/2021/032640140.html"/>
     <id>http://linraino.github.io/2021/032640140.html</id>
     <published>2021-03-26T01:16:27.000Z</published>
-    <updated>2021-03-26T01:54:11.079Z</updated>
+    <updated>2021-04-12T08:32:31.291Z</updated>
     
     <content type="html"><![CDATA[<h2 id="UML–用例图详解"><a href="#UML–用例图详解" class="headerlink" title="UML–用例图详解"></a>UML–用例图详解</h2><h3 id="用例图的含义"><a href="#用例图的含义" class="headerlink" title="用例图的含义"></a>用例图的含义</h3><p>由参与者（Actor）、用例（Use Case） 以及它们之间的关系构成的用于描述系统功能的动态视图称为用例图。<br>其中用例和参与者之间的对应关系又叫做通讯关联（Communication Association）。</p><h3 id="用例图的作用"><a href="#用例图的作用" class="headerlink" title="用例图的作用"></a>用例图的作用</h3><p>用例图是需求分析中的产物，主要作用是描述参与者与和用例之间的关系，帮助开发人员可视化地了解系统的功能。借助于用例图，系统用户、系统分析人员、系统设计人员、领域专家能够以可视化的方式对问题进行探讨，减少了大量交流上的障碍，便于对问题达成共识。</p><h3 id="用例图的构成元素"><a href="#用例图的构成元素" class="headerlink" title="用例图的构成元素"></a>用例图的构成元素</h3><p>用例图的构成元素又四个：参与者（角色）、用例、系统边界、元素之间的关系</p><ul><li><p>参与者(Actor)——与应用程序或系统进行交互的用户、组织或外部系统。用一个小人表示  </p><div align="left"><img src="https://img-blog.csdnimg.cn/20190914113914970.png"></div></li><li><p>用例(Use Case)——用例就是外部可见的系统功能，对系统提供的服务进行描述。用椭圆表示。</p><div align="left"><img src="https://img-blog.csdnimg.cn/20190914114018954.png"></div></li><li><p>系统边界——系统边界是指系统与系统之间的界限。用方形框+系统名称表示。</p><div align="left"><img src="https://img-blog.csdnimg.cn/20190914114347945.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NvbGRfX19wbGF5,size_16,color_FFFFFF,t_70"></div></li></ul><p>用例图中的关系有四种：<strong>关联、泛化、包含、扩展</strong></p><table><thead><tr><th align="center">关系类型</th><th align="center">说明</th><th align="center">表示符号</th></tr></thead><tbody><tr><td align="center">关连</td><td align="center">参与者与用例之间的关系</td><td align="center"><img src="https://img-blog.csdnimg.cn/20190914115208590.png"></td></tr><tr><td align="center">泛化</td><td align="center">参与者之间或用例之间的关系</td><td align="center"><img src="https://img-blog.csdnimg.cn/20190914115350223.png"></td></tr><tr><td align="center">包含</td><td align="center">用例之间的关系</td><td align="center"><img src="https://img-blog.csdnimg.cn/20190914115636117.png"></td></tr><tr><td align="center">扩展</td><td align="center">用例之间的关系</td><td align="center"><img src="https://img-blog.csdnimg.cn/20190914115814439.png"></td></tr></tbody></table><h3 id="1-包含"><a href="#1-包含" class="headerlink" title="1.包含"></a>1.包含</h3><p>包含关系指<strong>用例可以简单地包含其他用例具有的行为，并把它所包含的用例行为作为自身行为的一部分</strong>。<br>在UML中，包含关系是通过<strong>带箭头的虚线段 + &lt;&lt; include &gt;&gt;字样</strong>来表示的，箭头由<strong>基础用例（Base）指向被包含的用例（Inclusion）</strong>。</p><p><strong>主要由以下两种情况需要用到包含关系</strong>：</p><ol><li>多个用例用到同一段的行为，则可以把这段共同的行为单独抽象成一个用例，然后让其他用例来包含这一用例。  </li><li>当某一个用例的功能过多、事件流过于复杂时，也可以把某一段事件流抽象成一个被包含的哟管理，以达到简化描述的目的。  </li></ol><p><strong>包含关系的两个优点</strong>：</p><ol><li>提高了用例模型的可维护性，当需要对公共需求进行修改时，只需要修改一个用例而不必修改所有与其有关的用例。</li><li>不但可以避免在多个用例中重复的描述同一段行为，还可以避免在多个用例中对同一段行为描述不一致的现象。</li></ol><h3 id="2-扩展"><a href="#2-扩展" class="headerlink" title="2.扩展"></a>2.扩展</h3><p>在一定条件下，把新的行为加入到已有的用例中，获得的新用例叫做扩展用例（Extension）。原有的用例叫做基础用例（Base），从扩展用例到基础用例的关系就是扩展关系。<br>一个基础用例可以拥有一个或者多个扩展用例，这些扩展用例可以一起使用。需要注意的时：在扩展关系中是基础用例而不是扩展用例被当做例子使用。<br>在UML图中，扩展关系是通过带箭头的虚线段 + &lt;&lt; extend &gt;&gt; 字样来表示的，箭头指向基础用例。</p><div align="left"><img src="https://img-blog.csdnimg.cn/20190914181851551.png"></div><p><strong>扩展关系与包含关系的不同点如下：</strong></p><ul><li><p>在扩展关系中，基础用例提供了一个或者多个插入点，扩展用例为这些插入点提供了需要插入的行为。而在包含关系中，插入点只能有一个。</p></li><li><p>在扩展关系中，基础用例的执行并不一定会涉及到扩展用例，扩展用例只有在满足一定条件下才会被执行。而在包含关系中，当基础用例执行完后，被包含用例是一定会被执行的。</p></li><li><p>即使没有扩展用例，扩展关系中的基础用例本身也是完整的。而对于包含关系，基础用例在没有没有被包含用例的情况下就是不完整的存在。</p><div>    <img src="https://img-blog.csdnimg.cn/20190914182538608.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NvbGRfX19wbGF5,size_16,color_FFFFFF,t_70"></div><p>基础用例是“身份验证”，扩展用例是”修改密码“。在一般情况下，只需要执行”身份验证“用例即可。但是如果登录用户想要修改密码，这时就不能执行用例的常规动作。如果取修改”身份验证“用例，势必增加系统的复杂性，这时就可以在基础用例”身份验证“中增加插入点，这样用户向修改密码时，就执行扩展用例”修改密码“。</p></li></ul><h3 id="3-泛化"><a href="#3-泛化" class="headerlink" title="3.泛化"></a>3.泛化</h3><p>用例的泛化是指<strong>一个父用例可以被特化成多个子用例，而父用例和子用例之间的关系就是泛化关系。</strong><br>在用例的泛化关系中，子用例继承了父用例所有的结果、行为和关系，子用例是父用例的一种特殊形式。此外，子用例还可以添加、覆盖、改变继承的行为。<br>在UML中，用例的泛化关系是通过一个三角箭头从子用例指向父用例来表示的。</p><p><strong>泛化关系的使用场景：</strong><br>当系统中有两个或者多个用例存在行为、结构和目的方面存在共性时，就可以使用泛化关系。这时，可以用一个新的（通常也是抽象的）用例来描述这些共有部分，这个新的用例就是父用例。</p><div align="left"><img src="https://img-blog.csdnimg.cn/20190914183833390.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NvbGRfX19wbGF5,size_16,color_FFFFFF,t_70"></div><p>银行有两种存款方式，一种时柜台存款，一种时ATM存款。在上图中，银行柜台存款和ATM存款都是存款的一种特殊方式，因此“存款”为父用例，“银行柜台存款”和“ATM存款”为子用例。</p><p><strong>泛化关系和包含关系的区别:</strong></p><ul><li>在用例的泛化关系中，所有的子用例都有相似的目的和结构，注意它们是整体上的相似。而用例的包含关系中，基础用例在目的上可以完全不同，但是它们都有一段相似的行为，它们的相似是部分的相似不是整体的相似。</li><li>用例的泛化关系类似于面向对象中的继承，它把多个子用例中的共性抽象成一个父用例，子用例在继承父用例的基础上可以进行修改。但是子用例和子用例之间又是相互独立的，任何一个子用例的执行都不受其他子用例的影响。而用例的包含关系是把多个基础用例中的共性抽象为一个被包含用例，可以说被包含用例就是基础用例中的一部分，基础用例的执行必然引起被包含用例的执行。</li></ul>]]></content>
     
@@ -36,7 +36,9 @@
     <category term="UML" scheme="http://linraino.github.io/categories/UML/"/>
     
     
-    <category term="UML 笔记" scheme="http://linraino.github.io/tags/UML-%E7%AC%94%E8%AE%B0/"/>
+    <category term="UML" scheme="http://linraino.github.io/tags/UML/"/>
+    
+    <category term="笔记" scheme="http://linraino.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
